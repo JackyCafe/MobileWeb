@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+{% block title %}
+    Ma!
+{% endblock %}
+{% block content %}
+    {% for image in images  %}
+        <img width="800" height="600" src="{{ image.url }}">
+        
+    {% endfor %}
+     
+{% endblock %}

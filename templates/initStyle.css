@@ -1,0 +1,17 @@
+h1,h2,h3,h4,h5,p,div{
+        font-family: monospace;
+    }
+table {
+  border: 0;
+  font-family: arial;
+  font-size:14px;
+}
+th {
+  background-color:yellow;
+}
+
+
+tr{
+      background-color:aqua;
+
+ }

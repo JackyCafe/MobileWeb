@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+{% block title %} 我是抬頭
+
+{% endblock %}
+{% block content %}
+    <div class = 'container' align="center">
+   {% for product in products %}
+    {% if forloop.first %}
+    <table>
+        <tr bgcolor="#cccccc"><td width="250">品牌</td><td width="150">廠牌/型號</td>
+        <td width="150">年份</td>
+        <td width="150">價格</td>
+        </tr>
+    {% endif %}
+            <tr bgcolor='{% cycle "ffccff" "ccffcc" %}'>
+            <td> <a href="{% url "detail-url" product.id %}">{{ product.nickname }}</a> </td>
+            <td>{{ product.model.maker.name }}/{{ product.model }}</td>
+            <td>{{ product.year }}</td>
+            <td>{{ product.price }}</td>
+            </tr>
+
+    {% if forloop.last %}
+    </table>
+    {% endif %}
+
+    {% endfor %}
+    </div>
+
+{% endblock %}
